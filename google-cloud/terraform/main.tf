@@ -33,7 +33,7 @@ resource "google_container_cluster" "primary"{
 
 resource "google_sql_database_instance" "instance"{
     name = "cloudwarmupsql"
-    region = var.gcp.region
+    region = var.gcp_region
     database_version = "MYSQL_8_0"
     settings{
         tier = "db-f1-micro" //how much memory/CPU - using the smallest one
